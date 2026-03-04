@@ -2,8 +2,8 @@ name: Publish npm package
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -33,7 +33,27 @@ jobs:
       - name: Build package
         run: npm run build
 
+      - name: Read package info
+        id: pkg
+        run: |
+          echo "name=$(node -p "JSON.parse(require('fs').readFileSync('package.json','utf8')).name")" >> "$GITHUB_OUTPUT"
+          echo "version=$(node -p "JSON.parse(require('fs').readFileSync('package.json','utf8')).version")" >> "$GITHUB_OUTPUT"
+
+      - name: Check if version already published
+        id: version_check
+        run: |
+          if npm view "${{ steps.pkg.outputs.name }}@${{ steps.pkg.outputs.version }}" version >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Publish to npm
+        if: steps.version_check.outputs.exists == 'false'
         run: npm publish --access public --provenance
+
+      - name: Skip publish (already exists)
+        if: steps.version_check.outputs.exists == 'true'
+        run: echo "Version ${{ steps.pkg.outputs.version }} is already published. Skipping."
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
