@@ -1,0 +1,50 @@
+.pds-modal-overlay {
+  align-items: center;
+  background: var(--pds-color-overlay);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: var(--pds-space-8);
+  position: fixed;
+  z-index: 50;
+}
+
+.pds-modal {
+  background: var(--pds-color-bg-surface);
+  border-radius: var(--pds-radius-md);
+  box-shadow: var(--pds-shadow-modal);
+  max-width: 480px;
+  width: 100%;
+}
+
+.pds-modal__header {
+  align-items: center;
+  border-bottom: 1px solid var(--pds-color-border-subtle);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--pds-space-5) var(--pds-space-6);
+}
+
+.pds-modal__title {
+  color: var(--pds-color-text-primary);
+  font-size: var(--pds-font-size-lg);
+  font-weight: 700;
+  margin: 0;
+}
+
+.pds-modal__close {
+  background: transparent;
+  border: 0;
+  color: #475569;
+  cursor: pointer;
+  font-size: var(--pds-font-size-lg);
+  line-height: 1;
+  padding: var(--pds-space-1);
+}
+
+.pds-modal__content {
+  color: var(--pds-color-text-secondary);
+  font-size: var(--pds-font-size-sm);
+  line-height: 1.6;
+  padding: var(--pds-space-6);
+}

@@ -1,0 +1,34 @@
+.pds-btn {
+  border: 1px solid transparent;
+  border-radius: var(--pds-radius-sm);
+  cursor: pointer;
+  font-size: var(--pds-font-size-sm);
+  font-weight: 600;
+  line-height: 1;
+  padding: var(--pds-space-3) var(--pds-space-5);
+  transition: all var(--pds-transition-fast);
+}
+
+.pds-btn:focus-visible {
+  outline: var(--pds-focus-ring-width) solid var(--pds-color-focus-ring);
+  outline-offset: 2px;
+}
+
+.pds-btn--primary {
+  background-color: var(--pds-color-bg-primary);
+  color: var(--pds-color-text-inverse);
+}
+
+.pds-btn--primary:hover {
+  background-color: var(--pds-color-bg-primary-hover);
+}
+
+.pds-btn--secondary {
+  background-color: var(--pds-color-bg-surface);
+  border-color: var(--pds-color-border-default);
+  color: var(--pds-color-text-primary);
+}
+
+.pds-btn--secondary:hover {
+  background-color: var(--pds-color-bg-subtle);
+}

@@ -1,0 +1,41 @@
+.pds-input {
+  appearance: none;
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-sm);
+  color: var(--pds-color-text-primary);
+  outline: none;
+  transition: border-color var(--pds-transition-fast), box-shadow var(--pds-transition-fast);
+  width: 100%;
+}
+
+.pds-input:focus {
+  border-color: var(--pds-color-focus-input);
+  box-shadow: 0 0 0 3px rgba(51, 65, 85, 0.15);
+}
+
+.pds-input::placeholder {
+  color: #94a3b8;
+}
+
+.pds-input--sm {
+  font-size: var(--pds-font-size-xs);
+  padding: var(--pds-space-2) var(--pds-space-3);
+}
+
+.pds-input--md {
+  font-size: var(--pds-font-size-sm);
+  padding: var(--pds-space-3) var(--pds-space-4);
+}
+
+.pds-input--lg {
+  font-size: var(--pds-font-size-md);
+  padding: var(--pds-space-4) var(--pds-space-5);
+}
+
+.pds-input--invalid {
+  border-color: var(--pds-color-danger);
+}
+
+.pds-input--invalid:focus {
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15);
+}

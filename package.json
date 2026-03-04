@@ -1,0 +1,55 @@
+{
+  "name": "@mattnatest/pds",
+  "version": "0.1.0",
+  "description": "Internal design system package",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "storybook": "./scripts/storybook-dev.sh",
+    "build-storybook": "./scripts/storybook-build.sh",
+    "dev": "vite",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "./scripts/test.sh",
+    "test:storybook": "vitest --config vitest.config.ts"
+  },
+  "keywords": [],
+  "author": "mattna",
+  "license": "ISC",
+  "private": false,
+  "repository": "YOUR_GITHUB_REPOSITORY",
+  "type": "module",
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.0.1",
+    "@storybook/addon-a11y": "^10.2.14",
+    "@storybook/addon-docs": "^10.2.14",
+    "@storybook/addon-onboarding": "^10.2.14",
+    "@storybook/addon-vitest": "^10.2.14",
+    "@storybook/react-vite": "^10.2.14",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18",
+    "playwright": "^1.58.2",
+    "storybook": "^10.2.14",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  }
+}
