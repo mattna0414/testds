@@ -2,7 +2,9 @@
   appearance: none;
   border: 1px solid var(--pds-color-border-default);
   border-radius: var(--pds-radius-sm);
+  box-sizing: border-box;
   color: var(--pds-color-text-primary);
+  line-height: 1.4;
   outline: none;
   transition: border-color var(--pds-transition-fast), box-shadow var(--pds-transition-fast);
   width: 100%;
@@ -15,6 +17,11 @@
 
 .pds-input::placeholder {
   color: #94a3b8;
+}
+
+.pds-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .pds-input--sm {

@@ -1,29 +1,29 @@
-.pds-typo {
+.pds-typography {
   color: var(--pds-color-text-primary);
   margin: 0;
 }
 
-.pds-typo--display {
+.pds-typography--display {
   font-size: var(--pds-font-size-2xl);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
 
-.pds-typo--title {
+.pds-typography--title {
   font-size: var(--pds-font-size-xl);
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
-.pds-typo--body {
+.pds-typography--body {
   font-size: var(--pds-font-size-md);
   font-weight: 400;
   line-height: 1.6;
 }
 
-.pds-typo--caption {
+.pds-typography--caption {
   color: var(--pds-color-text-muted);
   font-size: var(--pds-font-size-xs);
   font-weight: 500;

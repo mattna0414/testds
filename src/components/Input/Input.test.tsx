@@ -7,14 +7,15 @@ describe('Input', () => {
   it('renders medium size by default', () => {
     const html = renderToStaticMarkup(<Input placeholder="Email" />);
 
-    expect(html).toContain('class="pds-input pds-input--md"');
+    expect(html).toContain('class="');
+    expect(html).toContain('h-9');
     expect(html).toContain('placeholder="Email"');
   });
 
   it('adds invalid class when invalid is true', () => {
     const html = renderToStaticMarkup(<Input invalid inputSize="lg" />);
 
-    expect(html).toContain('pds-input--lg');
-    expect(html).toContain('pds-input--invalid');
+    expect(html).toContain('h-11');
+    expect(html).toContain('border-destructive');
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './button.css';
+import { Button as UiButton } from '@/components/ui/button';
 
 export interface ButtonProps {
   /** Is this the principal call to action on the page? */
@@ -23,15 +23,18 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const variant = primary ? 'default' : 'secondary';
+  const mappedSize = size === 'small' ? 'sm' : size === 'large' ? 'lg' : 'default';
+
   return (
-    <button
+    <UiButton
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      variant={variant}
+      size={mappedSize}
+      style={backgroundColor ? { backgroundColor } : undefined}
       {...props}
     >
       {label}
-    </button>
+    </UiButton>
   );
 };

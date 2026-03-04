@@ -8,7 +8,7 @@ describe('Typography', () => {
     const html = renderToStaticMarkup(<Typography>Body text</Typography>);
 
     expect(html).toContain('<p');
-    expect(html).toContain('class="pds-typo pds-typo--body"');
+    expect(html).toContain('leading-7');
     expect(html).toContain('Body text');
   });
 
@@ -20,6 +20,6 @@ describe('Typography', () => {
     );
 
     expect(html).toContain('<h1');
-    expect(html).toContain('class="pds-typo pds-typo--display"');
+    expect(html).toContain('text-4xl');
   });
 });

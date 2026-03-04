@@ -1,34 +1,120 @@
-.pds-btn {
+.pds-button {
+  align-items: center;
   border: 1px solid transparent;
   border-radius: var(--pds-radius-sm);
   cursor: pointer;
+  display: inline-flex;
   font-size: var(--pds-font-size-sm);
-  font-weight: 600;
+  font-weight: 500;
+  gap: 8px;
+  justify-content: center;
   line-height: 1;
-  padding: var(--pds-space-3) var(--pds-space-5);
-  transition: all var(--pds-transition-fast);
+  transition: background-color var(--pds-transition-fast), color var(--pds-transition-fast), border-color var(--pds-transition-fast), box-shadow var(--pds-transition-fast);
+  white-space: nowrap;
 }
 
-.pds-btn:focus-visible {
+.pds-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.16);
   outline: var(--pds-focus-ring-width) solid var(--pds-color-focus-ring);
   outline-offset: 2px;
 }
 
-.pds-btn--primary {
+.pds-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.pds-button--default {
   background-color: var(--pds-color-bg-primary);
   color: var(--pds-color-text-inverse);
 }
 
-.pds-btn--primary:hover {
+.pds-button--default:hover {
   background-color: var(--pds-color-bg-primary-hover);
 }
 
-.pds-btn--secondary {
+.pds-button--destructive {
+  background-color: var(--pds-color-danger);
+  color: var(--pds-color-text-inverse);
+}
+
+.pds-button--destructive:hover {
+  filter: brightness(0.95);
+}
+
+.pds-button--outline {
   background-color: var(--pds-color-bg-surface);
   border-color: var(--pds-color-border-default);
   color: var(--pds-color-text-primary);
 }
 
-.pds-btn--secondary:hover {
+.pds-button--outline:hover,
+.pds-button--ghost:hover {
   background-color: var(--pds-color-bg-subtle);
+}
+
+.pds-button--secondary {
+  background-color: var(--pds-color-bg-subtle);
+  color: var(--pds-color-text-primary);
+}
+
+.pds-button--secondary:hover {
+  filter: brightness(0.98);
+}
+
+.pds-button--ghost {
+  background-color: transparent;
+  color: var(--pds-color-text-primary);
+}
+
+.pds-button--link {
+  background-color: transparent;
+  color: var(--pds-color-bg-primary);
+  text-underline-offset: 4px;
+}
+
+.pds-button--link:hover {
+  text-decoration: underline;
+}
+
+.pds-button--default-size {
+  height: 36px;
+  padding: 0 16px;
+}
+
+.pds-button--sm {
+  font-size: var(--pds-font-size-xs);
+  height: 32px;
+  padding: 0 12px;
+}
+
+.pds-button--lg {
+  height: 40px;
+  padding: 0 24px;
+}
+
+.pds-button--icon {
+  height: 36px;
+  padding: 0;
+  width: 36px;
+}
+
+.pds-button__spinner {
+  animation: pds-spin 1s linear infinite;
+  height: 14px;
+  width: 14px;
+}
+
+.pds-button__spinner-track {
+  opacity: 0.25;
+}
+
+.pds-button__spinner-fill {
+  opacity: 0.75;
+}
+
+@keyframes pds-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

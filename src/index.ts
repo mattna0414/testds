@@ -1,13 +1,9 @@
 import './tokens.css';
 export { Button } from './components/Button/Button';
 export type { ButtonProps } from './components/Button/Button';
-import './components/Button/Button.css';
 export { Input } from './components/Input/Input';
 export type { InputProps } from './components/Input/Input';
-import './components/Input/Input.css';
 export { Modal } from './components/Modal/Modal';
 export type { ModalProps } from './components/Modal/Modal';
-import './components/Modal/Modal.css';
 export { Typography } from './components/Typography/Typography';
 export type { TypographyProps } from './components/Typography/Typography';
-import './components/Typography/Typography.css';
