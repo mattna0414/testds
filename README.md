@@ -1,6 +1,6 @@
-# @your-company/design-system
+# @common/design-system
 
-사내 공통 디자인 시스템 (shadcn/ui 기반)
+공통 디자인 시스템 (shadcn/ui 기반)
 
 ---
 

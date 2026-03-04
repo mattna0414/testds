@@ -1,5 +1,5 @@
 {
-  "name": "@mattnatest/pds",
+  "name": "@gkssk/dstest",
   "version": "0.1.0",
   "description": "Internal design system package",
   "main": "./dist/index.cjs",
@@ -27,7 +27,10 @@
   "author": "mattna",
   "license": "ISC",
   "private": false,
-  "repository": "YOUR_GITHUB_REPOSITORY",
+  "repository": {
+    "type": "git",
+    "url": "YOUR_GITHUB_REPOSITORY"
+  },
   "type": "module",
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
