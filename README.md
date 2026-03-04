@@ -1,6 +1,6 @@
 # @common/design-system
 
-공통 디자인 시스템 (shadcn/ui 기반)
+- 공통 디자인 시스템 (shadcn/ui 기반)
 
 ---
 
