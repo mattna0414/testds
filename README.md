@@ -62,7 +62,7 @@ npm run storybook
 
 ```json
 {
-  "name": "@your-company/design-system",  ← GitHub 조직명으로 변경
+  "name": "@your-company/design-system",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }
@@ -160,8 +160,23 @@ npm version patch   # 1.0.0 → 1.0.1 (버그 수정)
 npm version minor   # 1.0.0 → 1.1.0 (기능 추가)
 npm version major   # 1.0.0 → 2.0.0 (Breaking change)
 
-git push origin main --tags
-# → GitHub Actions 자동 실행 → npm publish
+# 1) 배포할 버전으로 올리기 (예: 0.1.2)
+npm version 0.1.2
+
+# 2) npm 토큰 설정
+npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+
+# 3) npm 공개 배포
+npm publish --access public
+```
+
+> 주의: 토큰 문자열을 저장소 파일에 하드코딩하지 말고, 환경변수(`NPM_TOKEN`)로 주입해서 사용하세요.
+
+
+```bash
+# storybook 배포
+npm install --save-dev chromatic
+npx chromatic --project-token={TOKEN}
 ```
 
 ```bash
