@@ -19,7 +19,7 @@ const sizeClassMap: Record<InputSize, string> = {
 export function Input({ inputSize = 'md', invalid = false, className = '', ...props }: InputProps) {
   return (
     <ShadcnInput
-      className={cn(sizeClassMap[inputSize], invalid && 'border-destructive focus-visible:ring-destructive/40', className)}
+      className={cn(sizeClassMap[inputSize], invalid && 'border-destructive focus-visible:ring-destructive', className)}
       {...props}
     />
   );

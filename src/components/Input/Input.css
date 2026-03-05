@@ -12,7 +12,7 @@
 
 .pds-input:focus {
   border-color: var(--pds-color-focus-input);
-  box-shadow: 0 0 0 3px rgba(51, 65, 85, 0.15);
+  box-shadow: 0 0 0 3px var(--pds-color-focus-ring-soft);
 }
 
 .pds-input::placeholder {

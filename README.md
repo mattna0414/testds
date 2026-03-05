@@ -112,17 +112,26 @@ git push origin v1.0.0
 npm install @your-company/design-system
 ```
 
-### 3단계 - CSS 변수 추가 (프로젝트의 globals.css에)
+### 3단계 - CSS 변수 추가 (프로젝트의 globals.css 또는 index.css에)
 
 ```css
-/* 프로젝트의 globals.css */
+/* 프로젝트의 globals.css 또는 index.css */
 @import "@your-company/design-system/dist/styles.css";
 
-/* 또는 직접 CSS 변수 붙여넣기 */
+/* 공통 테마: --primary 하나만 바꾸면 primary 계열 스타일이 전체 반영됨 */
 :root {
-  --primary: 221.2 83.2% 53.3%;
-  /* ... */
+  --primary: 221 83% 53%;
 }
+```
+
+예시:
+
+```css
+/* 브랜드 블루 */
+:root { --primary: 221 83% 53%; }
+
+/* 브랜드 그린 */
+:root { --primary: 160 84% 39%; }
 ```
 
 ### 4단계 - 사용
