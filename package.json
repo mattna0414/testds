@@ -21,7 +21,8 @@
     "dev": "vite",
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "test": "./scripts/test.sh",
-    "test:storybook": "vitest --config vitest.config.ts"
+    "test:storybook": "vitest --config vitest.config.ts",
+    "publish:npm": "npm publish --access public --cache ./.npm-cache"
   },
   "keywords": [],
   "author": "mattna",
@@ -30,6 +31,10 @@
   "repository": {
     "type": "git",
     "url": "YOUR_GITHUB_REPOSITORY"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "type": "module",
   "dependencies": {
