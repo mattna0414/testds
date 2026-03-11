@@ -143,8 +143,15 @@ export default function MyPage() {
   return (
     <div>
       <Button variant="default">클릭</Button>
-      <Input label="이메일" placeholder="example@company.com" />
-      <Badge variant="success">완료</Badge>
+      <Input placeholder="example@company.com" />
+      <Badge>완료</Badge>
+      <Select
+        placeholder="상태 선택"
+        options={[
+          { label: "대기", value: "todo" },
+          { label: "완료", value: "done" }
+        ]}
+      />
     </div>
   )
 }
@@ -202,6 +209,9 @@ npm run build-storybook # 스토리북 빌드
 |---------|------|
 | `Button` | variant(6종), size(4종), isLoading 지원 |
 | `Input` | label, error, hint, leftIcon, rightIcon 지원 |
-| `Badge` | variant(6종) 지원 |
-| `Card` | CardHeader, CardTitle, CardDescription, CardContent, CardFooter |
-| `Avatar` | src, fallback, size(4종) 지원 |
+| `Badge` | default, secondary, outline, destructive variant 지원 |
+| `Textarea` | textareaSize(sm/md/lg), invalid 지원 |
+| `Select` | placeholder, disabled, options 기반 API 지원 |
+| `Checkbox` | checked, disabled 상태 지원 |
+| `Label` | shadcn label wrapper |
+| `FormField` | label, hint, error, required 조합 지원 |
